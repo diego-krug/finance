@@ -7,8 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/app/_components/ui/select";
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const MONTH_OPTIONS = [
   { value: "01", label: "January" },
@@ -44,7 +43,7 @@ const TimeSelect = () => {
       <SelectContent>
         {MONTH_OPTIONS.map((option) => (
           <SelectItem key={option.value} value={option.value}>
-            {option.value}
+            {option.label}
           </SelectItem>
         ))}
       </SelectContent>

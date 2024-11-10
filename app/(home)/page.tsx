@@ -24,12 +24,14 @@ const Home = async ({ searchParams: { month } }: HomeProps) => {
     <>
       <Navbar />
       <div className="space-y-6 p-6">
-        <div className="justify-content flex">
+        <div className="flex justify-between">
           <h1 className="text-2xl font-bold">Dashboard</h1>
           <TimeSelect />
         </div>
       </div>
-      <SummaryCards month={month} />
+      <div className="grid-cols-[2fr, 1fr] grid">
+        <SummaryCards month={month} />
+      </div>
     </>
   );
 };
